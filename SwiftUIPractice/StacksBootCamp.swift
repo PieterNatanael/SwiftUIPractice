@@ -9,7 +9,39 @@ import SwiftUI
 
 struct StacksBootCamp: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center, spacing: 33) {
+            Rectangle()
+                .frame(width: 70, height: 70)
+                .foregroundColor(.blue)
+            
+            Rectangle()
+                .frame(width: 70, height: 70)
+                .foregroundColor(.blue)
+            
+            HStack(alignment: .top, spacing: 33) {
+                Rectangle()
+                    .frame(width: 70, height: 70)
+                .foregroundColor(.blue)
+                
+                Rectangle()
+                    .frame(width: 70, height: 70)
+                .foregroundColor(.blue)
+                
+                VStack(alignment: .center, spacing: 33) {
+                    Rectangle()
+                        .frame(width: 70, height: 70)
+                    .foregroundColor(.blue)
+                    
+                    Rectangle()
+                        .frame(width: 70, height: 70)
+                    .foregroundColor(.blue)
+                    
+                    Rectangle()
+                        .frame(width: 70, height: 70)
+                    .foregroundColor(.blue)
+                }
+            }
+        }
     }
 }
 

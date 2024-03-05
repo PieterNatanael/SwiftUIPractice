@@ -8,11 +8,45 @@
 import SwiftUI
 
 struct InitializerBootCamp: View {
+    
+    let backgroundColor : Color
+    let foregroundColor : Color = Color.white
+    let count : Int
+    let names : String
+    
+    init(count: Int, fruit: Fruit) {
+        self.count = count
+        
+        if fruit == .Apple {
+            self.names = "apple"
+            self.backgroundColor = .red } else {
+                self.names = "orange"
+                self.backgroundColor = .orange
+        }
+    }
+    enum Fruit {
+        case Apple
+        case Orange
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("\(count)")
+                .font(.largeTitle)
+                .foregroundStyle(foregroundColor)
+            Text("\(names)")
+                .font(.title)
+                .foregroundStyle(foregroundColor)
+        }
+        .frame(width: 100, height: 100)
+        .background(backgroundColor)
     }
 }
 
 #Preview {
-    InitializerBootCamp()
+    HStack{
+        InitializerBootCamp(count: 5, fruit: .Orange)
+        InitializerBootCamp(count: 55, fruit: .Apple)
+    }
+
 }

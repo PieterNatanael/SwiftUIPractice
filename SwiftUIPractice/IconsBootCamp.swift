@@ -9,7 +9,21 @@ import SwiftUI
 
 struct IconsBootCamp: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(systemName: "heart.fill")
+                .resizable()
+                .scaledToFit()
+    //            .font(.largeTitle)
+    //            .font(.system(size: 150))
+                .foregroundColor(.blue)
+            .frame(width: 300, height: 300)
+            
+            Image(systemName: "xmark")
+                .font(.system(size: 200))
+            
+            Image(systemName: "paperplane.fill")
+                .font(.system(size: 200))
+            .foregroundColor(.purple)        }
     }
 }
 

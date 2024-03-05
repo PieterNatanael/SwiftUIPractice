@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ImageBootCamp: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image("dice")
+//            .renderingMode(.template)
+            .resizable()
+            .aspectRatio(contentMode: .fit
+            )
+            .frame(width: 250, height: 250)
+//            .foregroundColor(.green)
     }
 }
 
